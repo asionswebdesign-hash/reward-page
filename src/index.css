@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #0060a9;
+  --color-primary-container: #d3e4ff;
+  --color-on-primary-container: #004881;
+  
+  --color-secondary: #705d00;
+  --color-secondary-container: #ffe170;
+  --color-on-secondary-container: #544600;
+  
+  --color-tertiary: #7e28df;
+  --color-tertiary-container: #eddcff;
+  --color-on-tertiary-container: #6200bc;
+  
+  --color-surface: #f4faff;
+  --color-surface-container: #d9f2ff;
+  --color-surface-container-low: #e6f6ff;
+  --color-surface-container-high: #ceedfd;
+  --color-surface-container-highest: #c9e7f7;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-on-surface: #001f2a;
+  --color-on-surface-variant: #3c4758;
+  
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans;
+  }
+}
+
+.glass-effect {
+  @apply backdrop-blur-md bg-white/80 border-b border-blue-100/50;
+}
+
+.card-shadow {
+  @apply shadow-[0_8px_40px_rgba(0,96,169,0.08)];
+}
+
+.reward-card-hover {
+  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_50px_rgba(0,96,169,0.12)];
+}
